@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IIT ERP</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="page">
+
+            <div class="card">
+
+                <!-- Institute Header  -->
+                 <div class="header">
+                    <h1>IIT ERP Portal</h1>
+                    <p>Academic Year 2025-26</p>
+                 </div>
+
+                 <!-- TAB BUTTONS-->
+                  <div class="tabs">
+                    <button class="tab active" onclick="switchTab('student')">
+                        Student
+                    </button>
+                    <button class="tab" onclick="switchTab('admin')">
+                        Admin
+                    </button>
+                    <button class="tab" onclick="switchTab('director')">
+                        Director
+                    </button>
+                  </div>
+
+                  <!-- Student Form -->
+                  <div class="form" id="student">
+                    <label>Roll Number</label>
+                    <input type="text" id="roll" placeholder="Enter Roll Number" />
+
+                    <label>Password</label>
+                    <input type="password" id="student-pass" placeholder="Enter Password" />
+
+                    <button class="login-btn blue" onclick="login('student')">
+                    Sign In as Student
+                    </button>
+
+                  </div>
+
+                  <!-- Admin Form-->
+                   <div class="form hidden" id="admin">
+                    <label>Staff ID</label>
+                    <input type="text" id="staff-id" placeholder="enter Admin number" />
+
+                    <label>Department</label>
+                    <select id="department">
+                        <option>Select Department</option>
+                        <option>Academic Affairs</option>
+                        <option>Admissions</option>
+                        <option>Finance</option>
+                        <option>Hostel Management</option>
+                        <option>Examination cell</option>
+                    </select>
+
+                    <label>Password</label>
+                    <input type="password" id="admin-pass" placeholder="Enter password" />
+
+                    <button class="login-btn green" onclick="login('admin')">
+                        Sign In as Admin
+                    </button>
+                   </div>
+
+                   <!-- Director Form-->
+                    <div class="form hidden" id="director">
+                        <label>Director ID</label>
+                        <input type="text" id="dir-id" placeholder="Dir-Id" />
+
+                        <label>Password</label>
+                        <input type="password" id="dir-pass" placeholder="Enter password" />
+
+                        <label>OTP (2-Factor Auth)</label>
+                        <input type="text" id="otp" placeholder="6-digit code" maxlength="6" />
+
+                        <button class="login-btn purple" onclick="login('director')">
+                            Sign In as Director
+                        </button>
+                    </div>
+                     
+                    <!-- Message Box(shows errors/success)-->
+                     <div class="message hidden" id="message"></div>
+
+                
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+
+    </body>
+</html>
